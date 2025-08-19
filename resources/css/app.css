@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] { display: none !important; }
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track{
+  background: #2D3748;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #CBD5E0;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #718096;
+}
+
+/* Biar tabel responsif */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+/* Biar kolom rapih & wrap teks panjang */
+.table-wrapper table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table-wrapper th,
+.table-wrapper td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; /* Atur sesuai kebutuhan */
+}
+
+/* Bisa taruh di app.css */
+td.deskripsi-col {
+    max-width: 250px; /* lebar kolom maksimal */
+    white-space: nowrap; /* jangan pecah baris */
+    overflow: hidden; /* sembunyikan teks lebih */
+    text-overflow: ellipsis; /* tambahkan ... */
+}
+
+
+
+@layer components {
+  /* Style untuk link aktif (halaman sekarang) */
+  .pagination span[aria-current="page"] {
+    @apply bg-indigo-600 text-white rounded-md px-3 py-1 font-medium;
+  }
+
+  /* Style untuk link biasa */
+  .pagination a {
+    @apply text-indigo-600 bg-white border border-gray-300 px-3 py-1 rounded-md hover:bg-indigo-100;
+  }
+
+  /* Style untuk disabled button (misalnya "Previous" di halaman 1) */
+  .pagination span {
+    @apply text-gray-400 bg-gray-100 border border-gray-300 px-3 py-1 rounded-md;
+  }
+}
