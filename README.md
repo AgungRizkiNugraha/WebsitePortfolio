@@ -1,5 +1,4 @@
-# sadmin
-Sample Admin Template using Laravel, Breeze, Spatie, Tailwind Css (Dashboard Template) Intended to eliminate repititive tasks of creating admin with user, role & permission and some basic configurations to enable fast development of Laravel web apps.
+# Website Portfolio
 
 ### Steps to Run After Cloning
 
